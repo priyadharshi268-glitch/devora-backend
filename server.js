@@ -195,6 +195,14 @@ app.post("/api/admin/login", async (req, res) => {
 
     const { username, password } = req.body;
 
+    console.log("=================================");
+    console.log("Request Body:", req.body);
+    console.log("ENV USER:", process.env.ADMIN_USERNAME);
+    console.log("ENV PASS:", process.env.ADMIN_PASSWORD);
+    console.log("Received USER:", username);
+    console.log("Received PASS:", password);
+    console.log("=================================");
+
     if (
         username !== process.env.ADMIN_USERNAME ||
         password !== process.env.ADMIN_PASSWORD
